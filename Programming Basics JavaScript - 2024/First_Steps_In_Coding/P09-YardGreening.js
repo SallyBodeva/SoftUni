@@ -1,6 +1,6 @@
 function YardGreening(input){
     const PRICE_PER_AREA = 7.61;
-    const DISCOUNT = 18;
+    const DISCOUNT = 0.18;
 
     let bill = Number(input[0])*PRICE_PER_AREA;
     let discountPerArea = bill*DISCOUNT;
