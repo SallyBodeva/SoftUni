@@ -8,12 +8,12 @@ function repaint(input){
     const difluentNeeded = Number(input[2]);
     const workingHours = Number(input[3]);
 
-    let materialsBill = PAINT_PER_LITTER*(paintNeeded+(paintNeeded*0.1)) +
-     PLASTIC_PRICE*(plasticNeeeded+2)+DIFLUENT_PER_LITTER*difluentNeeded + 0.4;
+    let materialsBill = PAINT_PER_LITTER * (paintNeeded + (paintNeeded * 0.1)) +
+     PLASTIC_PRICE * (plasticNeeeded + 2) + DIFLUENT_PER_LITTER * difluentNeeded + 0.4;
     let workersSalary = (materialsBill * 0.30) * workingHours;
     let result = materialsBill+workersSalary;
 
     console.log(result);
 }
 
-repaint(["10 ","11 ","4 ","8 "]);
+repaint(["10 ","11 ","4 ","8 "]); 

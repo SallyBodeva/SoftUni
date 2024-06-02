@@ -7,12 +7,12 @@ function delivery(input){
     let fishMeals = Number(input[1]);
     let vegetarianMeals = Number(input[2]);
 
-    let foodBill = chickenMeals*CHICKEN_PRICE+fishMeals*FISH_PRICE+ vegetarianMeals*VEGETARIAN_PRICE;
+    let foodBill = chickenMeals * CHICKEN_PRICE + fishMeals * FISH_PRICE + vegetarianMeals * VEGETARIAN_PRICE;
     let dessertBill = foodBill * 0.20;
 
-    let result = foodBill+dessertBill+2.5;
+    let result = foodBill+dessertBill + 2.5;
 
     console.log(result);
 }
 
-delivery(["2","4","3"]);
+delivery(["2","4","3"]); 
