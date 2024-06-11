@@ -21,9 +21,9 @@ function Workikg(input) {
     sum *= 0.90;
 
     if(sum >= tripPrice){
-        console.log(`Yes! ${sum - tripPrice} lv left.`);
+        console.log(`Yes! ${(sum - tripPrice).toFixed(2)} lv left.`);
     } else{
-        console.log(`Not enough money! ${tripPrice - sum} lv needed.`);
+        console.log(`Not enough money! ${(tripPrice - sum).toFixed(2)} lv needed.`);
     }
 }
 
