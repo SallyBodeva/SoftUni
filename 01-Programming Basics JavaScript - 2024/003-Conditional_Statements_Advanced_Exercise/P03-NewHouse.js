@@ -24,15 +24,16 @@ function newHome(input) {
             bill *= 1.15;
         }
     } else if(typeFlower === "Gladiolus"){
-        bill = countFlowers * 3;
+        bill = countFlowers * 2.5;
         if(countFlowers < 80){
             bill *= 1.20;
         }
     }
      
     if(budget >= bill){
-        console.log(`Hey, you have a great garden with ${countFlowers} Tulips and ${(budget - bill).toFixed(2)} leva left.`);
+        console.log(`Hey, you have a great garden with ${countFlowers} ${typeFlower} and ${(budget - bill).toFixed(2)} leva left.`);
     } else{
         console.log(`Not enough money, you need ${(bill-budget).toFixed(2)} leva more.`);
     }
 }
+newHome(["Tulips","88","260"]);    
