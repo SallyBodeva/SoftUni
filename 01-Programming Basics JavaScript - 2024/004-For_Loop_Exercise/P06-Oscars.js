@@ -1,24 +1,17 @@
-function caclculatePoints(input){
-    const name = input[0];
-    let actorsPoints = Number(input[1]);
+function oscars(input) {
+    const boundary = 1250.5;
+
+    const actor = input[0];
+    let points = Number(input[1]);
     const judgesCount = Number(input[2]);
-    for(let i = 3; i < judgesCount * 2 - 1; i++){
-        let judgesPointsFromName = input[i].length;
-        i++;
-        let points = Number(input[i]);
-        actorsPoints += (judgesPointsFromName * points) / 2;
 
-        if(actorsPoints >= 1250.5){
-            console.log(`Congratulations, ${name} got a nominee for leading role with ${actorsPoints}!`);
-            break;
-        }
+    for (let i = 0; points <= boundary && i < judgesCount; i++) {
+        const judgesName = input[3 + i * 2];
+        const judgesPoints = Number(input[4 + i * 2]);
+
+        points += (judgesPoints * judgesName.length) / 2;
     }
 
-    if(actorsPoints >= 1250.5){
-        console.log(`Congratulations, ${name} got a nominee for leading role with ${actorsPoints}!`);
-    } else{
-        console.log(`Sorry, ${name} you need ${1250.5 - actorsPoints} more!`);
-    }
+    if (points > boundary) console.log(`Congratulations, ${actor} got a nominee for leading role with ${points.toFixed(1)}!`);
+    else console.log(`Sorry, ${actor} you need ${(boundary - points).toFixed(1)} more!`);
 }
-
-caclculatePoints(["Zahari Baharov","205","4","Johnny Depp","45","Will Smith","29","Jet Lee","10","Matthew Mcconaughey","39"]);    
