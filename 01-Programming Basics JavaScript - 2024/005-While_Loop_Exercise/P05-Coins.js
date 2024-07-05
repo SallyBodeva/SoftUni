@@ -1,13 +1,23 @@
-function change(input){
-    const change = Number(input[0]);
-    let neededCoins = 0;
-    while(change > 0){
-        if(change / 2 > 0){
-            neededCoins += Math.floor(change / 2);
-            change /= 2;
-        } else if(change / 1){
+function calculateChange(input) {
+    const money = Number(input.shift());
 
-        }
+    let cents = Math.floor(money * 100);
+
+    let coinsCount = 0;
+    while (cents > 0) {
+        if (cents >= 200) cents -= 200;
+        else if (cents >= 100) cents -= 100;
+        else if (cents >= 50) cents -= 50;
+        else if (cents >= 20) cents -= 20;
+        else if (cents >= 10) cents -= 10;
+        else if (cents >= 5) cents -= 5;
+        else if (cents >= 2) cents -= 2;
+        else cents -= 1;
+
+        coinsCount++;
     }
 
+    console.log(coinsCount);
 }
+
+calculateChange(["1.23"]);
