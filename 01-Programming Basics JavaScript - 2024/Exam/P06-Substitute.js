@@ -31,8 +31,3 @@ function validChanges(input) {
         }
     }
 }
-
-validChanges(["7",
-    "6",
-    "8",
-    "5"]);     
