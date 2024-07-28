@@ -16,5 +16,5 @@ function filming(input) {
         console.log(`Wingard needs ${(sum - budget).toFixed(2)} leva more.`)
     }
 }
-filming(["9587.88","222","55.68"]);    
+  
     
