@@ -4,4 +4,3 @@ function Greating(input){
     console.log(`Hello, ${name}!`);
 }
 
-Greating(["Sally"]);
