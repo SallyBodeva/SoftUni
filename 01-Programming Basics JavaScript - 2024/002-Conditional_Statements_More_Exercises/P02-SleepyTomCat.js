@@ -13,5 +13,3 @@ function sleepingTom(input) {
         console.log(`${Math.floor((30000 - totalMinsInPlays) / 60)} hours and ${(30000 - totalMinsInPlays) % 60} minutes less for play`);
     }
 }
-
-sleepingTom(["20"]);
