@@ -9,5 +9,3 @@ function isBetweenOrNot(input){
         console.log("Greater than 200");
     }
 }
-
-isBetweenOrNot(["210"]);
