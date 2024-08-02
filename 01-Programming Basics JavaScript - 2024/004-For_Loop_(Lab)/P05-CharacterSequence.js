@@ -6,5 +6,3 @@ function printSequance(input){
         console.log(text[i]);
     }
 }
-
-printSequance(["softUni"]);
