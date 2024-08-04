@@ -24,11 +24,3 @@ function profit(input){
     }
     console.log(`Club income - ${currentProfit.toFixed(2)} leva.`);
 }
-
-profit(["100",
-    "Sidecar",
-    "7",
-    "Mojito",
-    "5",
-    "White Russian",
-    "10"]);    
