@@ -1,24 +1,23 @@
 function guessThePassword(input) {
-   let initialPassword =  input.shift();
+   let initialPassword =  input[0];
    let correctPassword = initialPassword.split('').reverse().join('');
 
     let wrongGuessesCount = 0;
 
-   for(let i=1; i <= input.length; i++){
-    if(initialPassword === correctPassword){
+   for(let i=1; i < input.length; i++){
+    if(input[i] === correctPassword){
         console.log(`User ${initialPassword} logged in.`);
         break;
     } else{
-        console.log(`Incorrect password. Try again.`);
         wrongGuessesCount++;
-    }
-
-    if(wrongGuessesCount>=4){
-        console.log(`User ${initialPassword} blocked!`);
-        break;
+        if(wrongGuessesCount === 4){
+            console.log(`User ${initialPassword} blocked!`);
+            break;
+        }
+        console.log(`Incorrect password. Try again.`);
     }
    }
     
 }
 
-guessThePassword(['Acer','login','go','let me in','recA']);
+guessThePassword(['sunny','rainy','cloudy','sunny','not sunny']);
