@@ -7,5 +7,3 @@ function isSum(num1,num2,num3){
         console.log(`${sum} - Float`);
     }
 }
-
-isSum(9,100,1.1);
